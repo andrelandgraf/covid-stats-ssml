@@ -1,0 +1,143 @@
+@baseUrl = http://localhost:8888
+
+
+###  Everything about cases in Japan
+
+POST {{baseUrl}}/
+Content-Type: application/json
+
+{
+    "intent": "COUNTRY_CASES",
+    "contexts": [
+        {
+            "name": "COUNTRY_NAME",
+            "slot": "Japan"
+        }
+    ]
+}
+
+### Number of new cases in the South Korea
+
+POST {{baseUrl}}/
+Content-Type: application/json
+
+{
+    "intent": "COUNTRY_NEW_CASES",
+    "contexts": [
+        {
+            "name": "COUNTRY_NAME",
+            "slot": "S-Korea"
+        }
+    ]
+}
+
+### Number of total cases in Germany
+
+POST {{baseUrl}}/
+Content-Type: application/json
+
+{
+    "intent": "COUNTRY_TOTAL_CASES",
+    "contexts": [
+        {
+            "name": "COUNTRY_NAME",
+            "slot": "Germany"
+        }
+    ]
+}
+
+
+### Number of active cases in the Netherlands
+
+POST {{baseUrl}}/
+Content-Type: application/json
+
+{
+    "intent": "COUNTRY_ACTIVE_CASES",
+    "contexts": [
+        {
+            "name": "COUNTRY_NAME",
+            "slot": "Netherlands"
+        }
+    ]
+}
+
+
+### Number of cases per million in Mexico
+
+POST {{baseUrl}}/
+Content-Type: application/json
+
+{
+    "intent": "COUNTRY_CASES_PER_MILLION",
+    "contexts": [
+        {
+            "name": "COUNTRY_NAME",
+            "slot": "Mexico"
+        }
+    ]
+}
+
+
+### Number of tests in India
+
+POST {{baseUrl}}/
+Content-Type: application/json
+
+{
+    "intent": "COUNTRY_TESTS",
+    "contexts": [
+        {
+            "name": "COUNTRY_NAME",
+            "slot": "India"
+        }
+    ]
+}
+
+
+### Number of deaths in the USA
+
+POST {{baseUrl}}/
+Content-Type: application/json
+
+{
+    "intent": "COUNTRY_DEATHS",
+    "contexts": [
+        {
+            "name": "COUNTRY_NAME",
+            "slot": "USA"
+        }
+    ]
+}
+
+
+### Population in Germany
+
+POST {{baseUrl}}/
+Content-Type: application/json
+
+{
+    "intent": "COUNTRY_POPULATION",
+    "contexts": [
+        {
+            "name": "COUNTRY_NAME",
+            "slot": "Germany"
+        }
+    ]
+}
+
+
+### Comparison between France, Germany, and Spain
+
+POST {{baseUrl}}/
+Content-Type: application/json
+
+{
+    "intent": "COUNTRIES_CASES",
+    "contexts": [
+        {
+            "name": "COUNTRY_NAMES",
+            "slot": ["France", "Germany", "Spain"]
+        }
+    ]
+}
