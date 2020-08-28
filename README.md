@@ -211,3 +211,39 @@ Try the following requests:
     ]
 }
 ```
+
+- Total data worldwide
+
+```json
+{
+    "intent": "TOTAL_SUMMARY",
+    "contexts": []
+}
+```
+
+- Total cases
+
+```json
+{
+    "intent": "TOTAL_CASES",
+    "contexts": []
+}
+```
+
+- Total deaths
+
+```json
+{
+    "intent": "TOTAL_DEATHS",
+    "contexts": []
+}
+```
+
+- Total tests
+
+```json
+{
+    "intent": "TOTAL_TESTS",
+    "contexts": []
+}
+```

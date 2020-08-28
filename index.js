@@ -22,13 +22,12 @@ app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
 
 app.post('/', async (req, res) => {
-  global.ssmlDocument = new Document();
+  const { locale = 'en-US' } = req.body;
+  global.ssmlDocument = new Document(locale, true, true);
 
   loadDocument(req.body);
-  const root = new Node('speak');
-  ssmlDocument.body = root;
 
-  ReactSMML.render(<App />, root);
+  ReactSMML.render(<App />, ssmlDocument.body);
 
   console.log('initial');
   console.log(ssmlDocument.toString());

@@ -10,4 +10,9 @@ export default Object.freeze({
   countryTests: 'COUNTRY_TESTS',
   // multiple countries intents
   countriesCases: 'COUNTRIES_CASES',
+  // overall worldwide stats
+  totalSummary: 'TOTAL_SUMMARY',
+  totalDeaths: 'TOTAL_DEATHS',
+  totalCases: 'TOTAL_CASES',
+  totalTests: 'TOTAL_TESTS',
 });

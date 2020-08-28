@@ -3,9 +3,11 @@ import React, { useState, useMemo } from 'react';
 
 import isCountryIntent from './utils/isCountryIntent';
 import isCountriesIntent from './utils/isCountriesIntent';
+import isTotalIntent from './utils/isTotalIntent';
 import intents from './enums/intents';
 import { CountryProvider } from './contexts/country';
 import { CountriesProvider } from './contexts/countries';
+import { TotalProvider } from './contexts/total';
 import CountryDeaths from './handlers/country/deaths';
 import CountryPopulation from './handlers/country/population';
 import CountryCasesSummary from './handlers/country/cases/cases';
@@ -15,6 +17,10 @@ import CountryNewCases from './handlers/country/cases/new';
 import CountryActiveCases from './handlers/country/cases/active';
 import CountryTests from './handlers/country/tests';
 import CountriesCases from './handlers/countries/cases/cases';
+import TotalSummary from './handlers/total/summary';
+import TotalCases from './handlers/total/cases';
+import TotalDeaths from './handlers/total/deaths';
+import TotalTests from './handlers/total/tests';
 import UnsupportedIntent from './components/errors/unsupported';
 
 const routes = [
@@ -59,6 +65,23 @@ const routes = [
     intent: intents.countriesCases,
     handler: <CountriesCases />,
   },
+  // total
+  {
+    intent: intents.totalSummary,
+    handler: <TotalSummary />,
+  },
+  {
+    intent: intents.totalCases,
+    handler: <TotalCases />,
+  },
+  {
+    intent: intents.totalDeaths,
+    handler: <TotalDeaths />,
+  },
+  {
+    intent: intents.totalTests,
+    handler: <TotalTests />,
+  },
 ];
 
 const App = () => {
@@ -81,6 +104,14 @@ const App = () => {
       <CountriesProvider>
         <p>{route.handler}</p>
       </CountriesProvider>
+    );
+  }
+
+  if (isTotalIntent(intent)) {
+    return (
+      <TotalProvider>
+        <p>{route.handler}</p>
+      </TotalProvider>
     );
   }
 

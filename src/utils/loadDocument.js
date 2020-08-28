@@ -8,7 +8,6 @@ const loadDocument = request => {
   }
   ssmlDocument.intent = intent;
   ssmlDocument.contexts = contexts;
-  ssmlDocument.locale = 'en';
 };
 
 export default loadDocument;

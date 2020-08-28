@@ -141,3 +141,43 @@ Content-Type: application/json
         }
     ]
 }
+
+### Total worldwide summary
+
+POST {{baseUrl}}/
+Content-Type: application/json
+
+{
+    "intent": "TOTAL_SUMMARY",
+    "contexts": []
+}
+
+### Total cases
+
+POST {{baseUrl}}/
+Content-Type: application/json
+
+{
+    "intent": "TOTAL_CASES",
+    "contexts": []
+}
+
+### Total deaths
+
+POST {{baseUrl}}/
+Content-Type: application/json
+
+{
+    "intent": "TOTAL_DEATHS",
+    "contexts": []
+}
+
+### Total tests
+
+POST {{baseUrl}}/
+Content-Type: application/json
+
+{
+    "intent": "TOTAL_TESTS",
+    "contexts": []
+}
