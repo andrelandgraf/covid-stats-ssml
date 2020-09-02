@@ -1,10 +1,9 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useContext } from 'react';
 import PropTypes from 'prop-types';
 
 import loadingStatus from '../enums/loadingStatus';
-import contexts from '../enums/contexts';
-import getSlotValue from '../utils/getSlotValue';
-import { getDataByCountry, getDataByCountries } from '../covid-api';
+import { getDataByCountries } from '../covid-api';
+import { ConversationContext } from './conversation';
 import useStatus from '../hooks/useStatus';
 import CountriesPrompt from '../components/prompts/countries';
 import CountriesTimeout from '../components/timeouts/countries';
@@ -16,8 +15,8 @@ const CountriesContext = React.createContext({
 });
 
 function CountriesProvider({ children }) {
-  const [countries] = useState(getSlotValue(contexts.countryList));
-  console.log(countries);
+  const { conv } = useContext(ConversationContext);
+  const [countries] = useState(conv.getParameter('countries'));
   const [countriesData, setCountriesData] = useState();
   const { status, setStatus } = useStatus();
   console.log('fetching status', status);

@@ -1,18 +1,15 @@
-/* global ssmlDocument */
-import React, { useContext, useEffect } from 'react';
+import React, { useContext } from 'react';
 
 import { getCountryName } from '../../i18n';
 import { CountryContext } from '../../contexts/country';
+import useReadyOnRender from '../../hooks/useReadyOnRender';
 import Population from './population';
 
 const Deaths = () => {
   const {
     countryData: { country, deaths },
   } = useContext(CountryContext);
-
-  useEffect(() => {
-    ssmlDocument.setReady();
-  }, []);
+  useReadyOnRender();
 
   if (!deaths || !deaths.total) {
     return (

@@ -1,17 +1,14 @@
-/* global ssmlDocument */
-import React, { useContext, useEffect } from 'react';
+import React, { useContext } from 'react';
 
-import { CountryContext } from '../../contexts/country';
 import { getCountryName } from '../../i18n';
+import { CountryContext } from '../../contexts/country';
+import useReadyOnRender from '../../hooks/useReadyOnRender';
 
 const Tests = () => {
   const {
     countryData: { country, tests },
   } = useContext(CountryContext);
-
-  useEffect(() => {
-    ssmlDocument.setReady();
-  }, []);
+  useReadyOnRender();
 
   if (!tests || !tests['1M_pop'] || !tests.total) {
     return (

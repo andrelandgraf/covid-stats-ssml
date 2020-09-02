@@ -1,5 +1,10 @@
 import axios from 'axios';
 
+const countryMap = {
+  'United States': 'USA',
+  'South Korea': 'S-Korea',
+};
+
 /**
  * @param {string} country Optional
  */
@@ -14,7 +19,7 @@ const fetchData = country =>
       useQueryString: true,
     },
     params: {
-      country,
+      country: countryMap[country] || country,
     },
   })
     .then(({ data }) => {
@@ -56,7 +61,10 @@ const getDataByCountry = async country => {
 const getDataByCountries = async countries => {
   const response = await fetchData();
   const countiesData = response.filter(
-    data => !!countries.find(country => data.country === country)
+    data =>
+      !!countries
+        .map(country => countryMap[country] || country)
+        .find(country => data.country === country)
   );
   if (!countiesData || !countiesData.length) {
     console.error(`no countries data found for ${countries}`);

@@ -1,9 +1,9 @@
-/* global ssmlDocument */
-import React, { useContext, useEffect } from 'react';
+import React, { useContext } from 'react';
 import PropTypes from 'prop-types';
 
 import { getCountryName } from '../../../i18n';
 import { CountriesContext } from '../../../contexts/countries';
+import useReadyOnRender from '../../../hooks/useReadyOnRender';
 
 const Country = ({ countryData }) => {
   const { country, cases, population } = countryData;
@@ -28,11 +28,8 @@ Country.propTypes = {
 };
 
 const SummaryCases = () => {
+  useReadyOnRender();
   const { countriesData } = useContext(CountriesContext);
-  console.log(countriesData);
-  useEffect(() => {
-    ssmlDocument.setReady();
-  }, []);
 
   return (
     <>

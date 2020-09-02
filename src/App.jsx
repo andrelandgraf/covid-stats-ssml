@@ -1,10 +1,13 @@
-/* global ssmlDocument */
 import React, { useState, useMemo } from 'react';
+import PropTypes from 'prop-types';
+import { documentType, conversationType } from 'react-ssml-dom';
 
 import isCountryIntent from './utils/isCountryIntent';
 import isCountriesIntent from './utils/isCountriesIntent';
 import isTotalIntent from './utils/isTotalIntent';
 import intents from './enums/intents';
+import { ConversationProvider } from './contexts/conversation';
+import { DocumentProvider } from './contexts/document';
 import { CountryProvider } from './contexts/country';
 import { CountriesProvider } from './contexts/countries';
 import { TotalProvider } from './contexts/total';
@@ -84,38 +87,72 @@ const routes = [
   },
 ];
 
-const App = () => {
-  const [intent] = useState(ssmlDocument.intent);
+const Wrapper = ({ conv, doc, children }) => (
+  <ConversationProvider conv={conv}>
+    <DocumentProvider doc={doc}>{children}</DocumentProvider>
+  </ConversationProvider>
+);
+
+Wrapper.propTypes = {
+  conv: conversationType.isRequired,
+  doc: documentType.isRequired,
+  children: PropTypes.oneOfType([
+    PropTypes.arrayOf(PropTypes.node),
+    PropTypes.node,
+  ]).isRequired,
+};
+
+const App = ({ conv, doc }) => {
+  const [intent] = useState(conv.intent);
   const route = useMemo(() => routes.find(r => r.intent === intent), [intent]);
   if (!route) {
-    return <UnsupportedIntent />;
-  }
-
-  if (isCountryIntent(intent)) {
     return (
-      <CountryProvider>
-        <p>{route.handler}</p>
-      </CountryProvider>
+      <Wrapper conv={conv} doc={doc}>
+        <UnsupportedIntent />
+      </Wrapper>
     );
   }
 
   if (isCountriesIntent(intent)) {
     return (
-      <CountriesProvider>
-        <p>{route.handler}</p>
-      </CountriesProvider>
+      <Wrapper conv={conv} doc={doc}>
+        <CountriesProvider>
+          <p>{route.handler}</p>
+        </CountriesProvider>
+      </Wrapper>
+    );
+  }
+
+  if (isCountryIntent(intent)) {
+    return (
+      <Wrapper conv={conv} doc={doc}>
+        <CountryProvider>
+          <p>{route.handler}</p>
+        </CountryProvider>
+      </Wrapper>
     );
   }
 
   if (isTotalIntent(intent)) {
     return (
-      <TotalProvider>
-        <p>{route.handler}</p>
-      </TotalProvider>
+      <Wrapper conv={conv} doc={doc}>
+        <TotalProvider>
+          <p>{route.handler}</p>
+        </TotalProvider>
+      </Wrapper>
     );
   }
 
-  return <p>{route.handler}</p>;
+  return (
+    <Wrapper conv={conv} doc={doc}>
+      <p>{route.handler}</p>
+    </Wrapper>
+  );
+};
+
+App.propTypes = {
+  conv: conversationType,
+  doc: documentType,
 };
 
 export default App;

@@ -1,14 +1,14 @@
 // this is a demo server //
-/* global ssmlDocument */
 import React from 'react';
 import express from 'express';
 import bodyParser from 'body-parser';
 import helmet from 'helmet';
 import cors from 'cors';
 import dotenv from 'dotenv';
-import ReactSMML, { Document, Node } from 'react-ssml-dom';
+import ReactSMML, { Conversation, Document, withAoG } from 'react-ssml-dom';
 
-import loadDocument from './src/utils/loadDocument';
+import { aogMap } from './src/utils/mappers';
+
 import App from './src/App';
 
 dotenv.config();
@@ -21,41 +21,38 @@ app.use(cors());
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
 
+Conversation.useBuilder(withAoG, aogMap);
+
 app.post('/', async (req, res) => {
-  const { locale = 'en-US' } = req.body;
-  global.ssmlDocument = new Document(locale, true, true);
+  const conv = new Conversation(req.body);
+  const doc = new Document(conv.locale, true, false);
 
-  loadDocument(req.body);
-
-  ReactSMML.render(<App />, ssmlDocument.body);
+  ReactSMML.render(<App conv={conv} doc={doc} />, doc.body);
 
   console.log('initial');
-  console.log(ssmlDocument.toString());
+  console.log(doc.toString());
 
   let hasBeenSent = false;
-  const payload = {};
+
+  const sendToUser = logMessage => {
+    if (hasBeenSent) {
+      console.log('document has already be sent');
+      return;
+    }
+    console.log(logMessage);
+    hasBeenSent = true;
+    const reply = doc.toString();
+    console.log(reply);
+    res.json(conv.buildPayload(reply));
+  };
 
   const timeout = setTimeout(() => {
-    console.log('after timedout at 5000');
-    hasBeenSent = true;
-    const reply = ssmlDocument.toString();
-    payload.reply = reply;
-    console.log(reply);
-    res.json(payload);
+    sendToUser('sent after 5000ms');
   }, 5000);
 
-  await ssmlDocument.isReady;
-  if (hasBeenSent) {
-    console.log('has already been sent');
-  } else {
-    clearTimeout(timeout);
-    console.log('after isReady');
-    hasBeenSent = true;
-    const reply = ssmlDocument.toString();
-    payload.reply = reply;
-    console.log(reply);
-    res.json(payload);
-  }
+  await doc.isReady;
+  clearTimeout(timeout);
+  sendToUser('sent after isReady has resolved');
 });
 
 app.listen(8888, () =>

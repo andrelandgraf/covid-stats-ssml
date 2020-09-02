@@ -8,12 +8,7 @@ Content-Type: application/json
 
 {
     "intent": "COUNTRY_CASES",
-    "contexts": [
-        {
-            "name": "COUNTRY_NAME",
-            "slot": "Japan"
-        }
-    ]
+    "parameters": { "country": "Japan" }
 }
 
 ### Number of new cases in the South Korea
@@ -23,12 +18,7 @@ Content-Type: application/json
 
 {
     "intent": "COUNTRY_NEW_CASES",
-    "contexts": [
-        {
-            "name": "COUNTRY_NAME",
-            "slot": "S-Korea"
-        }
-    ]
+    "parameters": { "country": "S-Korea" }
 }
 
 ### Number of total cases in Germany
@@ -38,12 +28,7 @@ Content-Type: application/json
 
 {
     "intent": "COUNTRY_TOTAL_CASES",
-    "contexts": [
-        {
-            "name": "COUNTRY_NAME",
-            "slot": "Germany"
-        }
-    ]
+    "parameters": { "country": "Germany" }
 }
 
 
@@ -54,12 +39,7 @@ Content-Type: application/json
 
 {
     "intent": "COUNTRY_ACTIVE_CASES",
-    "contexts": [
-        {
-            "name": "COUNTRY_NAME",
-            "slot": "Netherlands"
-        }
-    ]
+    "parameters": { "country": "Netherlands" }
 }
 
 
@@ -70,12 +50,7 @@ Content-Type: application/json
 
 {
     "intent": "COUNTRY_CASES_PER_MILLION",
-    "contexts": [
-        {
-            "name": "COUNTRY_NAME",
-            "slot": "Mexico"
-        }
-    ]
+    "parameters": { "country": "Mexico" }
 }
 
 
@@ -86,12 +61,7 @@ Content-Type: application/json
 
 {
     "intent": "COUNTRY_TESTS",
-    "contexts": [
-        {
-            "name": "COUNTRY_NAME",
-            "slot": "India"
-        }
-    ]
+    "parameters": { "country": "India" }
 }
 
 
@@ -102,12 +72,7 @@ Content-Type: application/json
 
 {
     "intent": "COUNTRY_DEATHS",
-    "contexts": [
-        {
-            "name": "COUNTRY_NAME",
-            "slot": "USA"
-        }
-    ]
+     "parameters": { "country": "USA" }
 }
 
 
@@ -118,12 +83,7 @@ Content-Type: application/json
 
 {
     "intent": "COUNTRY_POPULATION",
-    "contexts": [
-        {
-            "name": "COUNTRY_NAME",
-            "slot": "Germany"
-        }
-    ]
+    "parameters": { "country": "Germany" }
 }
 
 
@@ -134,12 +94,7 @@ Content-Type: application/json
 
 {
     "intent": "COUNTRIES_CASES",
-    "contexts": [
-        {
-            "name": "COUNTRY_NAMES",
-            "slot": ["France", "Germany", "Spain"]
-        }
-    ]
+    "parameters": { "countries": ["France", "Germany", "Spain"] }
 }
 
 ### Total worldwide summary
@@ -148,8 +103,7 @@ POST {{baseUrl}}/
 Content-Type: application/json
 
 {
-    "intent": "TOTAL_SUMMARY",
-    "contexts": []
+    "intent": "TOTAL_SUMMARY"
 }
 
 ### Total cases
@@ -158,8 +112,7 @@ POST {{baseUrl}}/
 Content-Type: application/json
 
 {
-    "intent": "TOTAL_CASES",
-    "contexts": []
+    "intent": "TOTAL_CASES"
 }
 
 ### Total deaths
@@ -168,8 +121,7 @@ POST {{baseUrl}}/
 Content-Type: application/json
 
 {
-    "intent": "TOTAL_DEATHS",
-    "contexts": []
+    "intent": "TOTAL_DEATHS"
 }
 
 ### Total tests
@@ -178,6 +130,5 @@ POST {{baseUrl}}/
 Content-Type: application/json
 
 {
-    "intent": "TOTAL_TESTS",
-    "contexts": []
+    "intent": "TOTAL_TESTS"
 }

@@ -66,7 +66,7 @@ Use Postman or a tool of your choice to hit the fulfillment endpoint.
 ```bash
 curl -X POST http://localhost:8888/
      -H "Content-Type: application/json"
-     -d '{ "intent": "COUNTRIES_CASES", "contexts":[{"name": "COUNTRY_NAMES", "slot": ["Germany", "USA"] } ] }'
+     -d '{ "intent": "COUNTRIES_CASES", "parameters": { "countries": ["Germany", "USA"] } }'
 ```
 
 And there we go!
@@ -91,12 +91,7 @@ Try the following requests:
 ```json
 {
     "intent": "COUNTRY_CASES",
-    "contexts": [
-        {
-            "name": "COUNTRY_NAME",
-            "slot": "Japan"
-        }
-    ]
+    "parameters": { "country": "Japan" }
 }
 ```
 
@@ -105,12 +100,7 @@ Try the following requests:
 ```json
 {
     "intent": "COUNTRY_NEW_CASES",
-    "contexts": [
-        {
-            "name": "COUNTRY_NAME",
-            "slot": "S-Korea"
-        }
-    ]
+    "parameters": { "country": "S-Korea" }
 }
 ```
 
@@ -119,12 +109,7 @@ Try the following requests:
 ```json
 {
     "intent": "COUNTRY_TOTAL_CASES",
-    "contexts": [
-        {
-            "name": "COUNTRY_NAME",
-            "slot": "Germany"
-        }
-    ]
+    "parameters": { "country": "Germany" }
 }
 ```
 
@@ -133,12 +118,7 @@ Try the following requests:
 ```json
 {
     "intent": "COUNTRY_ACTIVE_CASES",
-    "contexts": [
-        {
-            "name": "COUNTRY_NAME",
-            "slot": "Netherlands"
-        }
-    ]
+    "parameters": { "country": "Netherlands" }
 }
 ```
 
@@ -147,12 +127,7 @@ Try the following requests:
 ```json
 {
     "intent": "COUNTRY_CASES_PER_MILLION",
-    "contexts": [
-        {
-            "name": "COUNTRY_NAME",
-            "slot": "Mexico"
-        }
-    ]
+    "parameters": { "country": "Mexico" }
 }
 ```
 
@@ -161,12 +136,7 @@ Try the following requests:
 ```json
 {
     "intent": "COUNTRY_TESTS",
-    "contexts": [
-        {
-            "name": "COUNTRY_NAME",
-            "slot": "India"
-        }
-    ]
+    "parameters": { "country": "India" }
 }
 ```
 
@@ -175,12 +145,7 @@ Try the following requests:
 ```json
 {
     "intent": "COUNTRY_DEATHS",
-    "contexts": [
-        {
-            "name": "COUNTRY_NAME",
-            "slot": "USA"
-        }
-    ]
+    "parameters": { "country": "USA" }
 }
 ```
 
@@ -189,12 +154,7 @@ Try the following requests:
 ```json
 {
     "intent": "COUNTRY_POPULATION",
-    "contexts": [
-        {
-            "name": "COUNTRY_NAME",
-            "slot": "Germany"
-        }
-    ]
+    "parameters": { "country": "Germany" }
 }
 ```
 
@@ -203,12 +163,7 @@ Try the following requests:
 ```json
 {
     "intent": "COUNTRIES_CASES",
-    "contexts": [
-        {
-            "name": "COUNTRY_NAMES",
-            "slot": ["France", "Germany", "Spain"]
-        }
-    ]
+    "parameters": { "countries": ["France", "Germany", "Spain"] }
 }
 ```
 
@@ -216,8 +171,7 @@ Try the following requests:
 
 ```json
 {
-    "intent": "TOTAL_SUMMARY",
-    "contexts": []
+    "intent": "TOTAL_SUMMARY"
 }
 ```
 
@@ -225,8 +179,7 @@ Try the following requests:
 
 ```json
 {
-    "intent": "TOTAL_CASES",
-    "contexts": []
+    "intent": "TOTAL_CASES"
 }
 ```
 
@@ -234,8 +187,7 @@ Try the following requests:
 
 ```json
 {
-    "intent": "TOTAL_DEATHS",
-    "contexts": []
+    "intent": "TOTAL_DEATHS"
 }
 ```
 
@@ -243,7 +195,6 @@ Try the following requests:
 
 ```json
 {
-    "intent": "TOTAL_TESTS",
-    "contexts": []
+    "intent": "TOTAL_TESTS"
 }
 ```

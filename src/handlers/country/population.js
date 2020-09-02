@@ -1,18 +1,15 @@
-/* global ssmlDocument */
-import React, { useContext, useEffect } from 'react';
+import React, { useContext } from 'react';
 import PropTypes from 'prop-types';
 
 import { getCountryName } from '../../i18n';
 import { CountryContext } from '../../contexts/country';
+import useReadyOnRender from '../../hooks/useReadyOnRender';
 
 const Population = ({ reportNoData }) => {
   const {
     countryData: { country, population },
   } = useContext(CountryContext);
-
-  useEffect(() => {
-    ssmlDocument.setReady();
-  }, []);
+  useReadyOnRender();
 
   if (!population && !reportNoData) return null;
 

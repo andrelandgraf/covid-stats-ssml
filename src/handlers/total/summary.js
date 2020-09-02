@@ -1,7 +1,7 @@
-/* global ssmlDocument */
-import React, { useEffect, useContext } from 'react';
+import React, { useContext } from 'react';
 
 import { TotalContext } from '../../contexts/total';
+import useReadyOnRender from '../../hooks/useReadyOnRender';
 import Cases from './cases';
 import Deaths from './deaths';
 import Tests from './tests';
@@ -10,10 +10,7 @@ const Summary = () => {
   const {
     data: { cases },
   } = useContext(TotalContext);
-
-  useEffect(() => {
-    ssmlDocument.setReady();
-  }, []);
+  useReadyOnRender();
 
   if (!cases) {
     return (

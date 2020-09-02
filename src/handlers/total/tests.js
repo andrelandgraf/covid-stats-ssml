@@ -1,19 +1,14 @@
-/* global ssmlDocument */
-import React, { useContext, useEffect } from 'react';
+import React, { useContext } from 'react';
 import PropTypes from 'prop-types';
 
 import { TotalContext } from '../../contexts/total';
+import useReadyOnRender from '../../hooks/useReadyOnRender';
 
 const Tests = ({ standalone, reportNoData }) => {
   const {
     data: { tests },
   } = useContext(TotalContext);
-
-  useEffect(() => {
-    if (standalone) {
-      ssmlDocument.setReady();
-    }
-  }, [standalone]);
+  useReadyOnRender(standalone);
 
   if (!tests || !tests.total) {
     if (!reportNoData) {

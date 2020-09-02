@@ -1,20 +1,15 @@
-/* global ssmlDocument */
-import React, { useContext, useEffect } from 'react';
+import React, { useContext } from 'react';
 import PropTypes from 'prop-types';
 
-import { CountryContext } from '../../../contexts/country';
 import { getCountryName } from '../../../i18n';
+import { CountryContext } from '../../../contexts/country';
+import useReadyOnRender from '../../../hooks/useReadyOnRender';
 
 const NewCases = ({ reportNoData, standalone }) => {
   const {
     countryData: { country, cases },
   } = useContext(CountryContext);
-
-  useEffect(() => {
-    if (standalone) {
-      ssmlDocument.setReady();
-    }
-  }, [standalone]);
+  useReadyOnRender(standalone);
 
   if (!cases || !cases.new) {
     if (!reportNoData) {
