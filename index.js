@@ -55,6 +55,7 @@ app.post('/', async (req, res) => {
   sendToUser('sent after isReady has resolved');
 });
 
-app.listen(8888, () =>
-  console.log('Express backend listening on port 8888! 🚀')
+const port = process.env.PORT || 8888;
+app.listen(port, () =>
+  console.log(`Express backend listening on port ${port}! 🚀`)
 );
