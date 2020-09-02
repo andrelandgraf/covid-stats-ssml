@@ -16,8 +16,7 @@ const Tests = ({ standalone, reportNoData }) => {
     }
     return (
       <s>
-        Unfortunately, there is no data available for the total number of
-        deaths.
+        Unfortunately, there is no data available for the total number of tests.
       </s>
     );
   }
