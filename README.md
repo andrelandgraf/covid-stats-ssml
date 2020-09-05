@@ -1,19 +1,19 @@
+<div align="center">
+  <img src="banner.png" alt="Covid Stats Banner" />
+</div>
 <h1 align="center">
   SSML COVID-19 Stats - ReactSSML
 </h1>
-<div align="center">
-  <img src="code.png" alt="Hello World SSML" />
-</div>
 
-## ❓What is this?
+This is a demo express app that returns SSML based on a simple request (similar to what a nlu provider would send). It is capable of processing Dialogflow and custom requests (see below). Query covid-19 stats through voice commands and REST requests. The data is provided by rapidapi.com - covid-193, find the data source [here](https://rapidapi.com/api-sports/api/covid-193). 
 
-Query covid-19 stats. Find the data source [here](https://rapidapi.com/api-sports/api/covid-193).
+## ❓ ReactSSML
 
-This is a demo express app that returns SSML based on a simple request (similar to what a nlu provider would send).
+![Hello World SSML using ReactSSML](code.png)
 
-It runs React to develop voice UIs. [ReactSSML](https://www.npmjs.com/package/react-ssml-dom) provides a simple custom React renderer that let's you use React and JSX to create SSML output.
+This application is utilizing [ReactSSML](https://www.npmjs.com/package/react-ssml-dom) and runs React to develop voice UIs. ReactSSML provides a simple custom React renderer that let's you use React and JSX to create SSML output.
 
-I wrote a small article about [my motivation](https://medium.com/@andre.timo.landgraf/a-react-renderer-for-ssml-91cdd1d66b3e).
+I wrote a small article about [my motivation](https://medium.com/@andre.timo.landgraf/a-react-renderer-for-ssml-91cdd1d66b3e) for using React for voice UIs.
 
 This project is brand new, so if you run into issues or have questions, open up an issue and let me know! Any feedback is highly appreciated.
 
