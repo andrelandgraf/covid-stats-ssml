@@ -1,4 +1,18 @@
-@baseUrl = http://localhost:8888
+@baseUrl = http://localhost:3000
+@apiUrl = https://covid-193.p.rapidapi.com
+
+
+### API test Countries
+
+GET {{apiUrl}}/countries
+X-RapidAPI-Host: covid-193.p.rapidapi.com
+X-RapidAPI-Key: 0d7c0b125amsh10015c2518910e5p12fb5fjsn0a60694a54eb
+
+### API test Countries
+
+GET {{apiUrl}}/statistics
+X-RapidAPI-Host: covid-193.p.rapidapi.com
+X-RapidAPI-Key: 0d7c0b125amsh10015c2518910e5p12fb5fjsn0a60694a54eb
 
 
 ###  Everything about cases in Japan
@@ -7,28 +21,38 @@ POST {{baseUrl}}/
 Content-Type: application/json
 
 {
-    "intent": "COUNTRY_CASES",
+    "intent": "country/summary",
     "parameters": { "country": "Japan" }
 }
 
-### Number of new cases in the South Korea
+###  Unkown country Middle Earth
 
 POST {{baseUrl}}/
 Content-Type: application/json
 
 {
-    "intent": "COUNTRY_NEW_CASES",
+    "intent": "country/summary",
+    "parameters": { "country": "Middle Earth" }
+}
+
+### Total number of new cases in the South Korea
+
+POST {{baseUrl}}/
+Content-Type: application/json
+
+{
+    "intent": "country/cases/total",
     "parameters": { "country": "S-Korea" }
 }
 
-### Number of total cases in Germany
+### Number of cases per million in Nigeria
 
 POST {{baseUrl}}/
 Content-Type: application/json
 
 {
-    "intent": "COUNTRY_TOTAL_CASES",
-    "parameters": { "country": "Germany" }
+    "intent": "country/cases/million",
+    "parameters": { "country": "Nigeria" }
 }
 
 
@@ -38,18 +62,18 @@ POST {{baseUrl}}/
 Content-Type: application/json
 
 {
-    "intent": "COUNTRY_ACTIVE_CASES",
+    "intent": "country/cases/active",
     "parameters": { "country": "Netherlands" }
 }
 
 
-### Number of cases per million in Mexico
+### Number of new cases in Mexico
 
 POST {{baseUrl}}/
 Content-Type: application/json
 
 {
-    "intent": "COUNTRY_CASES_PER_MILLION",
+    "intent": "country/cases/new",
     "parameters": { "country": "Mexico" }
 }
 
@@ -60,7 +84,7 @@ POST {{baseUrl}}/
 Content-Type: application/json
 
 {
-    "intent": "COUNTRY_TESTS",
+    "intent": "country/tests",
     "parameters": { "country": "India" }
 }
 
@@ -71,7 +95,7 @@ POST {{baseUrl}}/
 Content-Type: application/json
 
 {
-    "intent": "COUNTRY_DEATHS",
+    "intent": "country/deaths",
      "parameters": { "country": "USA" }
 }
 
@@ -82,19 +106,8 @@ POST {{baseUrl}}/
 Content-Type: application/json
 
 {
-    "intent": "COUNTRY_POPULATION",
+    "intent": "country/population",
     "parameters": { "country": "Germany" }
-}
-
-
-### Comparison between France, Germany, and Spain
-
-POST {{baseUrl}}/
-Content-Type: application/json
-
-{
-    "intent": "COUNTRIES_CASES",
-    "parameters": { "countries": ["France", "Germany", "Spain"] }
 }
 
 ### Total worldwide summary
@@ -103,7 +116,7 @@ POST {{baseUrl}}/
 Content-Type: application/json
 
 {
-    "intent": "TOTAL_SUMMARY"
+    "intent": "total/summary"
 }
 
 ### Total cases
@@ -112,7 +125,7 @@ POST {{baseUrl}}/
 Content-Type: application/json
 
 {
-    "intent": "TOTAL_CASES"
+    "intent": "total/cases"
 }
 
 ### Total deaths
@@ -121,7 +134,7 @@ POST {{baseUrl}}/
 Content-Type: application/json
 
 {
-    "intent": "TOTAL_DEATHS"
+    "intent": "total/deaths"
 }
 
 ### Total tests
@@ -130,5 +143,15 @@ POST {{baseUrl}}/
 Content-Type: application/json
 
 {
-    "intent": "TOTAL_TESTS"
+    "intent": "total/tests"
+}
+
+### Currently not implemented: Comparison between France, Germany, and Spain
+
+POST {{baseUrl}}/
+Content-Type: application/json
+
+{
+    "intent": "countries/cases",
+    "parameters": { "countries": ["France", "Germany", "Spain"] }
 }
