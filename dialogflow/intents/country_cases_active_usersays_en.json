@@ -1,0 +1,78 @@
+[
+  {
+    "id": "6265851b-7a2b-4658-a64f-9d8a15bee395",
+    "data": [
+      {
+        "text": "Currently active cases ",
+        "userDefined": false
+      },
+      {
+        "text": "Malaysia",
+        "meta": "@sys.geo-country",
+        "alias": "country",
+        "userDefined": true
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "en",
+    "updated": 0
+  },
+  {
+    "id": "cf8cac2a-e43e-439b-8d23-f06e32e0fbf2",
+    "data": [
+      {
+        "text": "Cases that are active in ",
+        "userDefined": false
+      },
+      {
+        "text": "China",
+        "meta": "@sys.geo-country",
+        "alias": "country",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "en",
+    "updated": 0
+  },
+  {
+    "id": "43a89fd5-7803-4cdd-bc86-2d79de97b4c5",
+    "data": [
+      {
+        "text": "Active cases ",
+        "userDefined": false
+      },
+      {
+        "text": "Poland",
+        "meta": "@sys.geo-country",
+        "alias": "country",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "en",
+    "updated": 0
+  },
+  {
+    "id": "7539dbb0-15be-4cc0-aab9-91630a15767b",
+    "data": [
+      {
+        "text": "Active cases in ",
+        "userDefined": false
+      },
+      {
+        "text": "Liberia",
+        "meta": "@sys.geo-country",
+        "alias": "country",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "en",
+    "updated": 0
+  }
+]

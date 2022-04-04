@@ -1,0 +1,63 @@
+[
+  {
+    "id": "71a06e6c-2195-4fc7-a0b1-5246a3c1b510",
+    "data": [
+      {
+        "text": "Million",
+        "userDefined": false
+      },
+      {
+        "text": " cases ",
+        "userDefined": false
+      },
+      {
+        "text": "USA",
+        "meta": "@sys.geo-country",
+        "alias": "country",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "en",
+    "updated": 0
+  },
+  {
+    "id": "1f1d8910-a238-4394-b195-e3d1e7029a56",
+    "data": [
+      {
+        "text": "Per million in ",
+        "userDefined": false
+      },
+      {
+        "text": "Argentina",
+        "meta": "@sys.geo-country",
+        "alias": "country",
+        "userDefined": true
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "en",
+    "updated": 0
+  },
+  {
+    "id": "b8552fa9-f44e-4b89-b2d8-0c7f6d0416d4",
+    "data": [
+      {
+        "text": "Cases in million in ",
+        "userDefined": false
+      },
+      {
+        "text": "Nigeria",
+        "meta": "@sys.geo-country",
+        "alias": "country",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "en",
+    "updated": 0
+  }
+]

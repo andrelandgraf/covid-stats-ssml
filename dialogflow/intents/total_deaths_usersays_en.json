@@ -1,0 +1,54 @@
+[
+  {
+    "id": "f8971443-00d6-444e-8889-ad2e7ffdbadb",
+    "data": [
+      {
+        "text": "All covid deaths",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "en",
+    "updated": 0
+  },
+  {
+    "id": "a688a816-6ef3-48f5-9790-1f4212de6bf7",
+    "data": [
+      {
+        "text": "Covid deaths",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "en",
+    "updated": 0
+  },
+  {
+    "id": "cb2049f7-8741-4900-b28c-86605eb42aa3",
+    "data": [
+      {
+        "text": "Total world deaths",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "en",
+    "updated": 0
+  },
+  {
+    "id": "9980a130-cac1-4b67-9965-946c04bf85eb",
+    "data": [
+      {
+        "text": "Deaths in the world",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "en",
+    "updated": 0
+  }
+]

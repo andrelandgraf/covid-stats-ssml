@@ -1,0 +1,154 @@
+[
+  {
+    "id": "14d5f555-6950-4df8-a826-075384ddcf7a",
+    "data": [
+      {
+        "text": "Covid cases ",
+        "userDefined": false
+      },
+      {
+        "text": "Panama",
+        "meta": "@sys.geo-country",
+        "alias": "country",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "en",
+    "updated": 0
+  },
+  {
+    "id": "2604ddd4-a23d-4661-b906-715d22ceb1b2",
+    "data": [
+      {
+        "text": "France",
+        "meta": "@sys.geo-country",
+        "alias": "country",
+        "userDefined": false
+      },
+      {
+        "text": " cases",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "en",
+    "updated": 0
+  },
+  {
+    "id": "cbbe6743-8367-4eb7-815a-9017e0948621",
+    "data": [
+      {
+        "text": "Cases in ",
+        "userDefined": false
+      },
+      {
+        "text": "Mongolia",
+        "meta": "@sys.geo-country",
+        "alias": "country",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "en",
+    "updated": 0
+  },
+  {
+    "id": "48441767-9e44-4fe8-9e8a-a1f63a496f60",
+    "data": [
+      {
+        "text": "Cases in ",
+        "userDefined": false
+      },
+      {
+        "text": "Canada",
+        "meta": "@sys.geo-country",
+        "alias": "country",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "en",
+    "updated": 0
+  },
+  {
+    "id": "6a8c43a5-a2e5-4ac9-88d8-0daab6128a2a",
+    "data": [
+      {
+        "text": "Spain",
+        "meta": "@sys.geo-country",
+        "alias": "country",
+        "userDefined": false
+      },
+      {
+        "text": " cases",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "en",
+    "updated": 0
+  },
+  {
+    "id": "e26b6428-cd78-4235-b788-18a5f74a0957",
+    "data": [
+      {
+        "text": "Cases in total in ",
+        "userDefined": false
+      },
+      {
+        "text": "Germany",
+        "meta": "@sys.geo-country",
+        "alias": "country",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "en",
+    "updated": 0
+  },
+  {
+    "id": "02bd6829-c5b5-40c0-a4dc-5d016707bbbd",
+    "data": [
+      {
+        "text": "Total cases in ",
+        "userDefined": false
+      },
+      {
+        "text": "Brazil",
+        "meta": "@sys.geo-country",
+        "alias": "country",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "en",
+    "updated": 0
+  },
+  {
+    "id": "cf9f1746-5e60-4fad-a653-369f997f3e4c",
+    "data": [
+      {
+        "text": "What are the total cases in ",
+        "userDefined": false
+      },
+      {
+        "text": "Japan",
+        "meta": "@sys.geo-country",
+        "alias": "country",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "en",
+    "updated": 0
+  }
+]

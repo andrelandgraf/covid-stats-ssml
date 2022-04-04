@@ -1,0 +1,41 @@
+[
+  {
+    "id": "bc806c82-0d4a-445d-99bc-6119514dcfac",
+    "data": [
+      {
+        "text": "All cases",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "en",
+    "updated": 0
+  },
+  {
+    "id": "42068737-cc87-4de5-9b7c-e8944e5f5d19",
+    "data": [
+      {
+        "text": "Cases in all countries",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "en",
+    "updated": 0
+  },
+  {
+    "id": "809d92a7-6103-475f-b266-af4534c601df",
+    "data": [
+      {
+        "text": "Cases in the world",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "en",
+    "updated": 0
+  }
+]

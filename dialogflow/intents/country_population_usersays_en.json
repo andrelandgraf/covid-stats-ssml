@@ -1,0 +1,78 @@
+[
+  {
+    "id": "0465ea1f-6b27-44f3-8e2a-8f8acb59e7a3",
+    "data": [
+      {
+        "text": "How many people live in the ",
+        "userDefined": false
+      },
+      {
+        "text": "UK",
+        "meta": "@sys.geo-country",
+        "alias": "country",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "en",
+    "updated": 0
+  },
+  {
+    "id": "f952f6df-298e-4ad1-9517-1ea53c18970d",
+    "data": [
+      {
+        "text": "Population ",
+        "userDefined": false
+      },
+      {
+        "text": "Germany",
+        "meta": "@sys.geo-country",
+        "alias": "country",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "en",
+    "updated": 0
+  },
+  {
+    "id": "8bef2fae-db27-42bf-bc81-a3a21633fe59",
+    "data": [
+      {
+        "text": "Population of ",
+        "userDefined": false
+      },
+      {
+        "text": "Peru",
+        "meta": "@sys.geo-country",
+        "alias": "country",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "en",
+    "updated": 0
+  },
+  {
+    "id": "37320ebb-f88f-462a-ace2-2c3a3b614e62",
+    "data": [
+      {
+        "text": "What is the population of ",
+        "userDefined": false
+      },
+      {
+        "text": "China",
+        "meta": "@sys.geo-country",
+        "alias": "country",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "en",
+    "updated": 0
+  }
+]

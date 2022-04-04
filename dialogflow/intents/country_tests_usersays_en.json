@@ -1,0 +1,78 @@
+[
+  {
+    "id": "11f907e4-d3dd-46d5-9023-7cefc89c1378",
+    "data": [
+      {
+        "text": "Tests ",
+        "userDefined": false
+      },
+      {
+        "text": "Chile",
+        "meta": "@sys.geo-country",
+        "alias": "country",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "en",
+    "updated": 0
+  },
+  {
+    "id": "3e24559f-838e-49b3-b3a0-611cf9de60d9",
+    "data": [
+      {
+        "text": "Number of tests in ",
+        "userDefined": false
+      },
+      {
+        "text": "Danemark",
+        "meta": "@sys.geo-country",
+        "alias": "country",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "en",
+    "updated": 0
+  },
+  {
+    "id": "9d12fec6-7457-4982-aa17-6e178555d524",
+    "data": [
+      {
+        "text": "Tests distributed ",
+        "userDefined": false
+      },
+      {
+        "text": "Ukraine",
+        "meta": "@sys.geo-country",
+        "alias": "country",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "en",
+    "updated": 0
+  },
+  {
+    "id": "6b2ffc6f-4332-4171-8539-0b5dfe0a4012",
+    "data": [
+      {
+        "text": "How many tests ",
+        "userDefined": false
+      },
+      {
+        "text": "India",
+        "meta": "@sys.geo-country",
+        "alias": "country",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "en",
+    "updated": 0
+  }
+]

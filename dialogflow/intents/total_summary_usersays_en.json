@@ -1,0 +1,80 @@
+[
+  {
+    "id": "57a04b1a-b974-4be9-9137-04405691a87a",
+    "data": [
+      {
+        "text": "World summary",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "en",
+    "updated": 0
+  },
+  {
+    "id": "76a142be-fc5e-4266-936c-f31c4bc1cd5e",
+    "data": [
+      {
+        "text": "World status",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "en",
+    "updated": 0
+  },
+  {
+    "id": "ae902ac9-2c4e-4604-8dd5-1b58562b7490",
+    "data": [
+      {
+        "text": "summary",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 1,
+    "lang": "en",
+    "updated": 0
+  },
+  {
+    "id": "2061d605-06ab-4c64-af7e-1d549aab074e",
+    "data": [
+      {
+        "text": "Covid status",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "en",
+    "updated": 0
+  },
+  {
+    "id": "393751ac-142c-4aac-9182-ec7f966edb5c",
+    "data": [
+      {
+        "text": "Total covid summary",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "en",
+    "updated": 0
+  },
+  {
+    "id": "2679e74b-fe05-4d0f-b620-2990f57ad316",
+    "data": [
+      {
+        "text": "Give me a summary",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "en",
+    "updated": 0
+  }
+]

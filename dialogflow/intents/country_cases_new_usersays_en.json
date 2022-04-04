@@ -1,0 +1,59 @@
+[
+  {
+    "id": "1dc94557-a92c-4cdd-94bc-d8ce2f13fc30",
+    "data": [
+      {
+        "text": "Cases that are new in ",
+        "userDefined": false
+      },
+      {
+        "text": "Russia",
+        "meta": "@sys.geo-country",
+        "alias": "country",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "en",
+    "updated": 0
+  },
+  {
+    "id": "e4c6a2f3-4559-4766-95c0-d4236d26974a",
+    "data": [
+      {
+        "text": "New cases ",
+        "userDefined": false
+      },
+      {
+        "text": "USA",
+        "meta": "@sys.geo-country",
+        "alias": "country",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "en",
+    "updated": 0
+  },
+  {
+    "id": "f6e6148e-e468-40c7-9d4b-ab5920fb7ab0",
+    "data": [
+      {
+        "text": "New cases count in ",
+        "userDefined": false
+      },
+      {
+        "text": "Mexico",
+        "meta": "@sys.geo-country",
+        "alias": "country",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "en",
+    "updated": 0
+  }
+]

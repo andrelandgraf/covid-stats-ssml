@@ -1,0 +1,59 @@
+[
+  {
+    "id": "1a08f3a1-a194-4365-8868-6297fdf52edf",
+    "data": [
+      {
+        "text": "What is the status in the ",
+        "userDefined": false
+      },
+      {
+        "text": "Netherlands",
+        "meta": "@sys.geo-country",
+        "alias": "country",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "en",
+    "updated": 0
+  },
+  {
+    "id": "80543066-fe82-4f18-96e5-622bde120e73",
+    "data": [
+      {
+        "text": "Summary ",
+        "userDefined": false
+      },
+      {
+        "text": "Germany",
+        "meta": "@sys.geo-country",
+        "alias": "country",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "en",
+    "updated": 0
+  },
+  {
+    "id": "27146d97-b3c5-4f30-b001-ed8f61769b7a",
+    "data": [
+      {
+        "text": "Summary ",
+        "userDefined": false
+      },
+      {
+        "text": "Japan",
+        "meta": "@sys.geo-country",
+        "alias": "country",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "en",
+    "updated": 0
+  }
+]

@@ -1,0 +1,59 @@
+[
+  {
+    "id": "1b0cbec6-d398-482f-8af0-9a9693024b97",
+    "data": [
+      {
+        "text": "Deaths ",
+        "userDefined": false
+      },
+      {
+        "text": "Canada",
+        "meta": "@sys.geo-country",
+        "alias": "country",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "en",
+    "updated": 0
+  },
+  {
+    "id": "7ee092c9-92ac-4bc3-b7cd-03a53a94bd38",
+    "data": [
+      {
+        "text": "Covid deaths ",
+        "userDefined": false
+      },
+      {
+        "text": "France",
+        "meta": "@sys.geo-country",
+        "alias": "country",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "en",
+    "updated": 0
+  },
+  {
+    "id": "9db446fe-5a84-453c-ab77-f5c20c3ed5e8",
+    "data": [
+      {
+        "text": "How many covid-related deaths in the ",
+        "userDefined": false
+      },
+      {
+        "text": "USA",
+        "meta": "@sys.geo-country",
+        "alias": "country",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "en",
+    "updated": 0
+  }
+]
