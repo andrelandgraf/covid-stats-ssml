@@ -4,6 +4,7 @@
   "description": "",
   "sideEffects": false,
   "scripts": {
+    "lint": "eslint .",
     "build": "remix build",
     "dev": "remix build && run-p dev:*",
     "dev:node": "cross-env NODE_ENV=development nodemon ./build/index.js --watch ./build/index.js",
@@ -22,8 +23,9 @@
     "morgan": "^1.10.0",
     "react": "^17.0.2",
     "react-dom": "^17.0.2",
-    "react-ssml-dom": "^2.0.0-experimental.4",
+    "react-ssml-dom": "^2.0.0",
     "remix": "^1.3.2",
+    "ssml-dom": "^0.0.4",
     "tiny-invariant": "^1.2.0"
   },
   "devDependencies": {

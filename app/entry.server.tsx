@@ -1,11 +1,6 @@
 import ReactSSML from 'react-ssml-dom';
 import { RemixServer } from 'remix';
 import type { EntryContext } from 'remix';
-import Conversation from '../conversation';
-
-type ConversationContext = {
-  conversation: Conversation;
-};
 
 export default async function handleRequest(
   request: Request,

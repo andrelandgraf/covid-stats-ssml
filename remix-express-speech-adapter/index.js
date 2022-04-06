@@ -1,4 +1,4 @@
-import Conversation, { ActionsOnGoogle, SimpleJSON } from '../conversation';
+import { Conversation, ActionsOnGoogle, SimpleJSON } from 'ssml-dom';
 
 const stream = require('stream');
 const node = require('@remix-run/node');

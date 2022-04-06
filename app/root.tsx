@@ -1,5 +1,5 @@
 import { Outlet, useCatch } from 'remix';
-import Conversation from '../conversation';
+import type { Conversation } from 'ssml-dom';
 import Error from '~/components/errors/generic';
 import Unsupported from '~/components/errors/unsupported';
 
@@ -18,7 +18,7 @@ declare global {
 
 export default function App() {
   return (
-    <speak version="1.1" xmlns="http://www.w3.org/2001/10/synthesis" xml:lang="en-US">
+    <speak version="1.1" xmlns="http://www.w3.org/2001/10/synthesis" xmlLang="en-US">
       <Outlet />
     </speak>
   );
@@ -27,7 +27,7 @@ export default function App() {
 export function ErrorBoundary({ error }: { error: any }) {
   console.error(error);
   return (
-    <speak version="1.1" xmlns="http://www.w3.org/2001/10/synthesis" xml:lang="en-US">
+    <speak version="1.1" xmlns="http://www.w3.org/2001/10/synthesis" xmlLang="en-US">
       <Error error="internal" />
     </speak>
   );
@@ -36,7 +36,7 @@ export function ErrorBoundary({ error }: { error: any }) {
 export function CatchBoundary() {
   const caught = useCatch();
   return (
-    <speak version="1.1" xmlns="http://www.w3.org/2001/10/synthesis" xml:lang="en-US">
+    <speak version="1.1" xmlns="http://www.w3.org/2001/10/synthesis" xmlLang="en-US">
       {caught.status === 404 ? <Unsupported /> : <Error error="internal" />}
     </speak>
   );

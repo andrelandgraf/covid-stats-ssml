@@ -1,4 +1,4 @@
-const config = require('.prettierrc.js');
+const config = require('./.prettierrc');
 
 module.exports = {
   parser: '@typescript-eslint/parser',

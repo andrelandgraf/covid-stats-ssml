@@ -1,4 +1,5 @@
-import { LoaderFunction, Outlet, useLoaderData } from 'remix';
+import type { LoaderFunction } from 'remix';
+import { Outlet, useLoaderData } from 'remix';
 import { getDataByCountry } from '~/covid-api/index.server';
 import CountryPrompt from '~/components/prompts/country';
 import CountryError from '~/components/errors/country';

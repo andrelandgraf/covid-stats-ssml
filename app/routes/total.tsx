@@ -1,4 +1,5 @@
-import { LoaderFunction, Outlet, useLoaderData } from 'remix';
+import type { LoaderFunction } from 'remix';
+import { Outlet, useLoaderData } from 'remix';
 import { getDataByCountry } from '~/covid-api/index.server';
 import TotalError from '~/components/errors/total';
 import { useOptionalTotalData } from '~/hooks/useTotalData';
